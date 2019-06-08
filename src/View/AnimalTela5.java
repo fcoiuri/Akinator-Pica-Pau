@@ -131,7 +131,7 @@ public class AnimalTela5 extends javax.swing.JFrame {
             case 1:
                 new AnimalTela3().setVisible(true);
                 break;
-            case 2:
+            default:
                 new AnimalTela6().setVisible(true);
                 break;
         }

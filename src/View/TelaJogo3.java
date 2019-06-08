@@ -13,6 +13,8 @@ import javax.swing.JOptionPane;
  */
 public class TelaJogo3 extends javax.swing.JFrame {
 
+    boolean verificacao = true;
+
     /**
      * Creates new form TelaJogo
      */
@@ -120,20 +122,31 @@ public class TelaJogo3 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Tocando mp3 = new Tocando();
-        mp3.sim();
-        txt_resposta.setText("Inspetor Willoughby");
-        painel.setVisible(true);
-        
+        if (verificacao) {
+            Tocando mp3 = new Tocando();
+            mp3.sim();
+
+            txt_resposta.setText("Inspetor Willoughby");
+            painel.setVisible(true);
+            verificacao = false;
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Jogue Novamente!");
+            this.dispose();
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        Tocando mp3 = new Tocando();
-        mp3.nao();
-        
-        JOptionPane.showMessageDialog(null, "Infelizmente nenhum personagem se enquadra nessas características");
-        
-        
+        if (verificacao) {
+            Tocando mp3 = new Tocando();
+            mp3.nao();
+            JOptionPane.showMessageDialog(null, "Infelizmente nenhum personagem se enquadra nessas características");
+            verificacao = false;
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Jogue Novamente!");
+            this.dispose();
+        }
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 

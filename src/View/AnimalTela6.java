@@ -132,7 +132,7 @@ double aleatorio = Math.random() * 2;
             case 1:
                 new AnimalTela3().setVisible(true);
                 break;
-            case 2:
+            default:
                 new AnimalTela5().setVisible(true);
                 break;
         }        

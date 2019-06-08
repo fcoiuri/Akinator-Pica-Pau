@@ -5,11 +5,15 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author franc
  */
 public class TelaJogo6 extends javax.swing.JFrame {
+
+    boolean verificacao = true;
 
     /**
      * Creates new form TelaJogo
@@ -118,19 +122,29 @@ public class TelaJogo6 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Tocando mp3 = new Tocando();
-        mp3.sim();
-        painel.setVisible(true);
-        txt_resposta.setText("João Seboso");
+        if (verificacao) {
+            Tocando mp3 = new Tocando();
+            mp3.sim();
+            painel.setVisible(true);
+            txt_resposta.setText("João Seboso");
+            verificacao = false;
+        } else {
+            JOptionPane.showMessageDialog(null, "Jogue Novamente!");
+            this.dispose();
+        }
 
-        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        Tocando mp3 = new Tocando();
-        mp3.nao();
-        
-        new TelaJogo6().setVisible(true);
+        if (verificacao) {
+            Tocando mp3 = new Tocando();
+            mp3.nao();
+            new TelaJogo6().setVisible(true); //ajeitar tela pra abrir
+            verificacao = false;
+        } else {
+            JOptionPane.showMessageDialog(null, "Jogue Novamente!");
+            this.dispose();
+        }
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
