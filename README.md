@@ -6,7 +6,7 @@
 <img src = "ReadMe/1.JPG" width = "375" height =  "375" >
 </font>
 
-## Para testar basta baixar o arquivo [*Akinator_Pica_Pau.jar*] (https://github.com/FranciscoIuri/Akinator-Pica-Pau/tree/master/dist/) que fica na pasta dist.
+## Para testar basta acessar a pasta *dist* e baixar o arquivo [*Akinator_Pica_Pau.jar*](https://github.com/FranciscoIuri/Akinator-Pica-Pau/tree/master/dist/).
 
 <font>
 <img src = "ReadMe/2.JPG" width = "375" height =  "375" >
